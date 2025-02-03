@@ -4,6 +4,12 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/api", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to the API",
+  });
+});
+
 app.get("/api/books", (req, res) => {
   res.status(200).json({
     books: [
